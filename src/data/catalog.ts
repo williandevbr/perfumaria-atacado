@@ -1,6 +1,6 @@
 import { Product } from '../types';
 
-// Catálogo real — BA PERFUMS (1973 produtos).
+// Catálogo real — BA PARFUMS (1973 produtos).
 // Gerado automaticamente a partir dos dados oficiais do site. Não editar manualmente.
 // Foto de cada produto: /imagens/produtos/<code>.jpg  (code = id oficial)
 // Foto de cada categoria: /imagens/categorias/<categoria>.jpg

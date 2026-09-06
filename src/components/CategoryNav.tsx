@@ -43,10 +43,10 @@ export const CategoryNav: React.FC<CategoryNavProps> = ({
   };
 
   const arrowClass =
-    'hidden md:flex shrink-0 w-9 h-9 items-center justify-center rounded-full border border-black/15 bg-white text-black/60 shadow hover:border-[#D4AF37] hover:text-black transition-colors';
+    'hidden md:flex shrink-0 w-9 h-9 items-center justify-center rounded-full border border-black/15 dark:border-white/20 bg-white dark:bg-white/10 text-black/60 dark:text-white/60 shadow hover:border-[#D4AF37] hover:text-black dark:hover:text-white transition-colors';
 
   return (
-    <div className="bg-white border-b border-black/5 py-5 px-2">
+    <div className="bg-white dark:bg-[#121212] border-b border-black/5 dark:border-white/10 py-5 px-2 transition-colors">
       <div className="max-w-7xl mx-auto flex items-center gap-2">
         <button
           onClick={() => scrollCategories(-1)}
@@ -95,7 +95,7 @@ export const CategoryNav: React.FC<CategoryNavProps> = ({
               </div>
               <span
                 className={`text-[9px] sm:text-[10px] text-center font-semibold uppercase leading-tight line-clamp-2 ${
-                  isSelected ? 'text-black' : 'text-black/60 group-hover:text-black'
+                  isSelected ? 'text-black dark:text-white' : 'text-black/60 dark:text-white/60 group-hover:text-black dark:group-hover:text-white'
                 }`}
               >
                 {category === 'TODOS' ? 'Todos' : category}

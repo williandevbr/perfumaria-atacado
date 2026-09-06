@@ -43,7 +43,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.92, y: 20 }}
         transition={{ type: 'spring', stiffness: 300, damping: 28 }}
-        className="relative bg-white w-full max-w-3xl max-h-[90vh] overflow-y-auto border-t-4 border-[#D4AF37]"
+        className="relative bg-white dark:bg-[#151515] w-full max-w-3xl max-h-[90vh] overflow-y-auto border-t-4 border-[#D4AF37] transition-colors"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -80,10 +80,10 @@ export const ProductModal: React.FC<ProductModalProps> = ({
             <span className="text-[10px] font-bold text-[#D4AF37] uppercase tracking-widest mb-1">
               {product.category}
             </span>
-            <h2 className="text-xl sm:text-2xl font-bold text-black uppercase tracking-tight leading-snug">
+            <h2 className="text-xl sm:text-2xl font-bold text-black dark:text-white uppercase tracking-tight leading-snug">
               {product.name}
             </h2>
-            <p className="text-xs text-black/60 uppercase tracking-widest mt-1 mb-4">
+            <p className="text-xs text-black/60 dark:text-white/60 uppercase tracking-widest mt-1 mb-4">
               Ref: {product.inspiration}
             </p>
 
@@ -103,15 +103,16 @@ export const ProductModal: React.FC<ProductModalProps> = ({
             )}
 
             {product.description && (
-              <p className="text-sm text-black/70 leading-relaxed mb-4">
+              <p className="text-sm text-black/70 dark:text-white/70 leading-relaxed mb-4">
                 {product.description}
               </p>
             )}
 
             <div className="mt-auto pt-2">
-              <div className="font-extrabold text-3xl text-black tracking-tight mb-4">
+              <div className="font-extrabold text-3xl text-black dark:text-white tracking-tight mb-1">
                 {formatBRL(product.wholesalePrice)}
               </div>
+              <p className="text-[11px] text-black/50 dark:text-white/50 mb-4">⚠️ Preços podem sofrer variações. Consulte via WhatsApp.</p>
 
               <div className="flex items-center gap-3">
                 <div className="flex items-center bg-black text-white h-11">

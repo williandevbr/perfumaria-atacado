@@ -17,9 +17,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   onSelect,
 }) => {
   return (
-    <div className="bg-white group rounded-none border border-black/10 overflow-hidden flex flex-col h-full hover:border-[#D4AF37] hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all duration-300">
+    <div className="bg-white dark:bg-[#151515] group rounded-none border border-black/10 dark:border-white/10 overflow-hidden flex flex-col h-full hover:border-[#D4AF37] hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all duration-300">
       <div
-        className="relative aspect-square w-full bg-white border-b border-black/10 overflow-hidden cursor-pointer"
+        className="relative aspect-square w-full bg-white dark:bg-white border-b border-black/10 dark:border-white/10 overflow-hidden cursor-pointer"
         onClick={() => onSelect(product)}
       >
         <img
@@ -47,21 +47,21 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
       <div className="p-3 flex flex-col flex-1 text-center">
         <div className="cursor-pointer" onClick={() => onSelect(product)}>
-          <h3 className="text-xs sm:text-[13px] font-bold text-black uppercase tracking-tight line-clamp-2 leading-snug mb-0.5">
+          <h3 className="text-xs sm:text-[13px] font-bold text-black dark:text-white uppercase tracking-tight line-clamp-2 leading-snug mb-0.5">
             {product.name}
           </h3>
-          <p className="text-[9px] sm:text-[10px] text-black/70 uppercase tracking-widest line-clamp-1 mb-2">
+          <p className="text-[9px] sm:text-[10px] text-black/70 dark:text-white/60 uppercase tracking-widest line-clamp-1 mb-2">
             Ref: {product.inspiration}
           </p>
         </div>
 
         <div className="mt-auto space-y-2">
           <div className="flex flex-col items-center justify-center gap-0">
-            <span className="font-extrabold text-lg text-black tracking-tight">{formatBRL(product.wholesalePrice)}</span>
+            <span className="font-extrabold text-lg text-black dark:text-white tracking-tight">{formatBRL(product.wholesalePrice)}</span>
           </div>
 
           {quantityInCart > 0 ? (
-            <div className="flex items-center justify-between bg-black text-white rounded-none p-1 h-8 border border-black">
+            <div className="flex items-center justify-between bg-black dark:bg-[#D4AF37] text-white dark:text-black rounded-none p-1 h-8 border border-black dark:border-[#D4AF37]">
               <button
                 onClick={(e) => { e.stopPropagation(); onAddToCart(product, -1); }}
                 className="w-8 h-full flex items-center justify-center hover:text-[#D4AF37] transition-colors"
@@ -79,7 +79,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           ) : (
             <button
               onClick={(e) => { e.stopPropagation(); onAddToCart(product, 1); }}
-              className="w-full h-8 bg-transparent border border-black text-black font-bold text-[10px] uppercase tracking-widest hover:bg-[#D4AF37] hover:border-[#D4AF37] hover:text-white transition-all duration-300 flex items-center justify-center gap-1.5"
+              className="w-full h-8 bg-transparent border border-black dark:border-white/30 text-black dark:text-white font-bold text-[10px] uppercase tracking-widest hover:bg-[#D4AF37] hover:border-[#D4AF37] hover:text-white transition-all duration-300 flex items-center justify-center gap-1.5"
             >
               <ShoppingCart className="w-3.5 h-3.5" /> Adicionar
             </button>

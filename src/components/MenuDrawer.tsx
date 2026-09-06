@@ -27,7 +27,7 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
         animate={{ x: 0 }}
         exit={{ x: '-100%' }}
         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-        className="w-full max-w-[280px] bg-white h-full flex flex-col shadow-2xl"
+        className="w-full max-w-[280px] bg-white dark:bg-[#121212] h-full flex flex-col shadow-2xl transition-colors"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="p-4 bg-black flex items-center justify-between border-b border-[#D4AF37]">
@@ -40,7 +40,7 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto bg-white py-2">
+        <div className="flex-1 overflow-y-auto bg-white dark:bg-[#0B0B0B] py-2 transition-colors">
           {categories.map((category) => (
             <button
               key={category}
@@ -48,10 +48,10 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                 onSelectCategory(category);
                 onClose();
               }}
-              className={`w-full flex items-center justify-between px-6 py-4 text-left border-b border-black/5 transition-colors ${
-                selectedCategory === category 
-                  ? 'bg-[#F8F8F8] text-[#D4AF37] font-bold' 
-                  : 'text-black hover:bg-black/5 font-medium'
+              className={`w-full flex items-center justify-between px-6 py-4 text-left border-b border-black/5 dark:border-white/10 transition-colors ${
+                selectedCategory === category
+                  ? 'bg-[#F8F8F8] dark:bg-white/10 text-[#D4AF37] font-bold'
+                  : 'text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/5 font-medium'
               }`}
             >
               <span className="text-sm uppercase tracking-wide">
