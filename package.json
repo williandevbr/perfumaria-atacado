@@ -2,6 +2,8 @@
   "name": "ba-perfums-catalogo",
   "private": true,
   "version": "1.0.0",
+  "author": "williandevbr",
+  "license": "UNLICENSED",
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
