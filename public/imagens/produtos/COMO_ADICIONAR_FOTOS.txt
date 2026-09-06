@@ -1,0 +1,14 @@
+=========================================================
+PASTA DE FOTOS DOS PERFUMES (3299 PRODUTOS)
+=========================================================
+
+Para adicionar as fotos dos seus 3299 perfumes de forma automática:
+
+1. Faça o upload das fotos nesta pasta (public/imagens/produtos).
+2. Para que o site reconheça a foto automaticamente, o nome do arquivo da foto deve ser EXATAMENTE o CÓDIGO (Referência) do perfume que está na sua planilha/sistema.
+
+Exemplo: 
+- Se o perfume "Brand Collection 001" tem o código "001" no seu sistema...
+- O nome da foto dele deve ser: "001.jpg" (ou .png)
+
+Dessa forma, o site vai "puxar" a foto certa para o perfume certo sem você precisar configurar um por um!

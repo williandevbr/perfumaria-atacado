@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, .font-luxury {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+/* Custom Gold Accent Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e6ca65;
+}
+
+/* Gold Gradient Utilities */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FFF6D6 0%, #D4AF37 50%, #AA8010 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, #D4AF37, #AA8010, #D4AF37) 1;
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.25);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
