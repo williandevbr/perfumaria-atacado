@@ -1,0 +1,14 @@
+=========================================================
+PASTA DE FOTOS DAS CATEGORIAS
+=========================================================
+
+Para alterar as bolinhas com as fotos das categorias no topo do site:
+
+1. Faça o upload das fotos nesta pasta (public/imagens/categorias).
+2. O nome do arquivo deve ser exatamente o nome da categoria.
+
+Exemplo:
+- Para a categoria "BRAND 25 ML", o nome do arquivo deve ser "BRAND 25 ML.jpg" (ou .png).
+- Para a categoria "TODOS", o nome deve ser "TODOS.jpg".
+
+O sistema puxará automaticamente a imagem correta!

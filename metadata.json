@@ -1,0 +1,6 @@
+{
+  "name": "BA PERFUMS",
+  "description": "Catálogo exclusivo de perfumes no atacado com cores preto, branco e dourado, suporte a mais de 1000 itens e finalização de pedidos diretamente no WhatsApp (38 99725-6058).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
