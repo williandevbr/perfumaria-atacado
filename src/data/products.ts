@@ -17,7 +17,7 @@ export const PRICE_ADJUSTMENTS: Record<string, number> = {
   'Isabelle La Belle': 42.0,
   'Sapatinhos 25ml': 38.0,
   'Splash Árabe': 39.0,
-  'Tubetes 30ml': 30.0,
+  'Tubetes 30ml': 25.0,
 };
 
 export function getPriceAdjustment(category: string): number {
