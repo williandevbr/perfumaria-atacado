@@ -1,7 +1,8 @@
 import { Product } from '../types';
 import { CATALOG } from './catalog';
 
-// Catálogo real — BA PARFUMS (1973 produtos).
+// Catálogo real — BA PARFUMS (1973 produtos na base, 1945 na loja
+// após remover os 28 decants miscategorizados da Arabic Collection).
 // Os dados estão em ./catalog.ts (gerado a partir do site oficial).
 // Foto de cada produto: /imagens/produtos/<code>.jpg  (code = id oficial do produto)
 // Preço de atacado = preço base do catálogo + acréscimo por categoria (tabela 2026).
@@ -23,8 +24,15 @@ export function getPriceAdjustment(category: string): number {
   return PRICE_ADJUSTMENTS[category] ?? 0;
 }
 
+// Decants de 1,5ml que vieram miscategorizados na "Arabic Collection"
+// (ex.: "Decant 1,5ml Arabic Khamrah"). São removidos da loja para não
+// aparecerem na aba com o preço errado (+R$ 40 da Arabic Collection).
+function isStrayArabicDecant(p: Product): boolean {
+  return p.category === 'Arabic Collection' && /decant/i.test(p.name);
+}
+
 export function generateFullCatalog(): Product[] {
-  return CATALOG.map((p) => {
+  return CATALOG.filter((p) => !isStrayArabicDecant(p)).map((p) => {
     const add = getPriceAdjustment(p.category);
     if (!add) return p;
     const wholesalePrice = Math.round((p.wholesalePrice + add) * 100) / 100;
