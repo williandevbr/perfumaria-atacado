@@ -8,7 +8,7 @@ import { CATALOG } from './catalog';
 // Preço de atacado = preço base do catálogo + acréscimo por categoria (tabela 2026).
 export const PRICE_ADJUSTMENTS: Record<string, number> = {
   'Arabic Collection': 40.0,
-  'Árabe': 62.0,
+  'Árabe': 60.0,
   'Body Splash Brand Colletion': 40.0,
   'Brand 25ml': 40.0,
   'Brand 80/100ml': 40.0,
